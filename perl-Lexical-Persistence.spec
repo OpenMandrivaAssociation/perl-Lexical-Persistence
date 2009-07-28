@@ -1,22 +1,20 @@
+%define upstream_name    Lexical-Persistence
+%define upstream_version 0.98
 
-%define realname   Lexical-Persistence
-%define version    0.98
-%define release    %mkrel 1
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
 Summary:    Bind lexicals to persistent data
-Source:     http://www.cpan.org/modules/by-module/Lexical/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: perl-devel
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Lexical/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(Devel::LexAlias)
 BuildRequires: perl(PadWalker)
-
 BuildArch: noarch
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 Lexical::Persistence does a few things, all related. Note that all the
@@ -30,7 +28,7 @@ in the $lp object between setter() and getter().
 	use Lexical::Persistence;
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -51,5 +49,4 @@ rm -rf %buildroot
 %doc CHANGES README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
 
