@@ -1,5 +1,5 @@
 %define upstream_name    Lexical-Persistence
-%define upstream_version 0.98
+%define upstream_version 1.01
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -14,7 +14,7 @@ Source0:    http://www.cpan.org/modules/by-module/Lexical/%{upstream_name}-%{ups
 BuildRequires: perl(Devel::LexAlias)
 BuildRequires: perl(PadWalker)
 BuildArch: noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Lexical::Persistence does a few things, all related. Note that all the
@@ -49,4 +49,3 @@ rm -rf %buildroot
 %doc CHANGES README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
