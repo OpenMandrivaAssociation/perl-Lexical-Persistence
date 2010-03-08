@@ -1,9 +1,9 @@
 %define upstream_name    Lexical-Persistence
-%define upstream_version 1.01
+%define upstream_version 1.020
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:    Bind lexicals to persistent data
 License:    GPL+ or Artistic
