@@ -1,15 +1,15 @@
 %define upstream_name    Lexical-Persistence
-%define upstream_version 1.020
+%define upstream_version 1.023
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	1
 
 Summary:	Bind lexicals to persistent data
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Lexical/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Lexical/Lexical-Persistence-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Devel::LexAlias)
@@ -72,4 +72,5 @@ make test
 
 * Wed Dec 03 2008 cpan2dist 0.98-1mdv
 - initial mdv release, generated with cpan2dist
+
 
